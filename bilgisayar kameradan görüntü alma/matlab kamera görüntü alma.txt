@@ -1,0 +1,6 @@
+
+>> Video=videoinput('winvideo',2,'MJPG_640x360')
+
+>> preview(Video)
+
+

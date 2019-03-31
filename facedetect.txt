@@ -1,0 +1,7 @@
+faceDetector = vision.CascadeObjectDetector;
+shapeInserter = vision.ShapeInserter('BorderColor','Custom','CustomBorderColor',[0 255 255]);
+I=imread('resim adý');
+imshow(I);shg;
+bbox = step(faceDetector, I);
+I_faces = step(shapeInserter, I, int32(bbox));
+imshow(I_faces), title('Detected faces');
